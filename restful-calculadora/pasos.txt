@@ -1,0 +1,30 @@
+git config --global user.name ""Luis Polo"
+git config --list
+git help
+
+git init
+git status
+git add restful-calculadora/ git status -s
+git commit -m "Primera version pruebas unitarias"
+
+git remote add origin git@github.com:LuisPolo/PruebasUnitarias.git
+git remote -v
+git push origin master
+
+ssh-keygen -t rsa -b 4096 -C "luispolomartinez@gmail.com"
+cat ~/.ssh/id_rsa.pub
+
+git pull
+git push -f origin master
+touch pasos.txt
+
+
+
+
+
+
+
+
+
+
+
