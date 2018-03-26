@@ -1,11 +1,17 @@
+//Configuracion del GIT
 git config --global user.name ""Luis Polo"
 git config --list
 git help
 
+//Inicializamos repositorio
 git init
+//Ver en que estado esta mi proyecto
 git status
-git add restful-calculadora/ 
+//Agregamos cambios al stage
+git add restful-calculadora/
+//Status resumido 
 git status -s
+//Comiteamos a local
 git commit -m "Primera version pruebas unitarias"
 
 //Url remoto
@@ -44,6 +50,7 @@ git clone https://github.com/LuisPolo/PruebasUnitarias.git
 git config --local -e
 --Salir de la pantalla (http://www.unirioja.es/cu/enriquez/docencia/Quimica/vi.pdf)
 ctrl C :q! 
+
 
 
 
