@@ -4,10 +4,17 @@ git help
 
 git init
 git status
-git add restful-calculadora/ git status -s
+git add restful-calculadora/ 
+git status -s
 git commit -m "Primera version pruebas unitarias"
 
+//Url remoto
 git remote add origin git@github.com:LuisPolo/PruebasUnitarias.git
+//Cambiar la url del remoto
+https://github.com
+git remote set-url origin https://github.com/LuisPolo/PruebasUnitarias.git
+git remote set-url origin https://github.com/USERNAME/REPOSITORY.git
+
 git remote -v
 git push origin master
 
@@ -19,7 +26,24 @@ git push -f origin master
 touch pasos.txt
 
 
+//Cambiar proxy
+//Con el ssh
 
+git clone git@github.com:LuisPolo/PruebasUnitarias.git
+
+
+git config --global http.proxy http://192.168.10.24:8080
+git config --global --get http.proxy
+git config --global --unset http.proxy
+//Para probar si el puerto esta bloqueado - The reason could be the firewall modification as you are under a network
+ssh -T git@github.com
+//Si se quiere hacer por https
+git clone https://github.com/LuisPolo/PruebasUnitarias.git
+
+--Ver la configuracion local
+git config --local -e
+--Salir de la pantalla (http://www.unirioja.es/cu/enriquez/docencia/Quimica/vi.pdf)
+ctrl C :q! 
 
 
 
