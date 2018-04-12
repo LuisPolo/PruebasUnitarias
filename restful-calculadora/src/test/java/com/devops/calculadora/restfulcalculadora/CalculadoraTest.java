@@ -1,25 +1,43 @@
 package com.devops.calculadora.restfulcalculadora;
 
-import static org.junit.Assert.assertEquals;
+import com.devops.calculadora.restfulcalculadora.*;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
-import org.junit.Test;
+/*Imports para usar el Junit*/
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Test;
+/*Imports para poder ser usados desde un app externo*/
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Result;
+import org.junit.runner.notification.Failure;
 
-public class CalculadoraTest {
+class calculadoraTest {
 
-	@Test(expected = IllegalArgumentException.class)
-	  public void testExceptionIsThrown() {
+	@Test
+	void testSuma() {
+	
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testResta() {
+		fail("Not yet implemented"); // TODO
+	}
+
+	@Test
+	void testMultiplicacion() {
 		Calculadora tester = new Calculadora();
-	    tester.multiply(1000, 5);
-	  }
+		
+		// assert statements
+        assertEquals(0,tester.multiplicacion(10, 0), "10 x 0 must be 0");
+        assertEquals(0, tester.multiplicacion(0, 10), "0 x 10 must be 0");
+        assertEquals(0, tester.multiplicacion(0, 0), "0 x 0 must be 0");
+		
+	}
 
-	  @Test
-	  public void testMultiply() {
-		  Calculadora tester = new Calculadora();
-	    assertEquals("10 x 5 must be 50", 50, tester.multiply(10, 5));
-	  }
+	@Test
+	void testDivision() {
+		fail("Not yet implemented"); // TODO
+	}
 
 }
