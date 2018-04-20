@@ -6,38 +6,36 @@ import com.devops.calculadora.restfulcalculadora.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
-/*Imports para poder ser usados desde un app externo*/
-import org.junit.runner.JUnitCore;
-import org.junit.runner.Result;
-import org.junit.runner.notification.Failure;
 
-class calculadoraTest {
 
+public class calculadoraTest {
+
+	Calculadora tester = new Calculadora();
+	
 	@Test
 	void testSuma() {
-	
-		fail("Not yet implemented"); // TODO
+	    System.out.println("Entre a suma");
+		assertEquals(15, tester.suma(10, 5), "10 + 5 debe ser 15");
 	}
 
 	@Test
 	void testResta() {
-		fail("Not yet implemented"); // TODO
+		assertEquals(5, tester.resta(10, 5), "10 - 5 debe ser 10");
 	}
 
 	@Test
-	void testMultiplicacion() {
-		Calculadora tester = new Calculadora();
+	void testMultiplicacion() {		
 		
 		// assert statements
         assertEquals(0,tester.multiplicacion(10, 0), "10 x 0 must be 0");
-        assertEquals(0, tester.multiplicacion(0, 10), "0 x 10 must be 0");
+        assertEquals(0, tester.multiplicacion(5, 10), "0 x 10 must be 0");
         assertEquals(0, tester.multiplicacion(0, 0), "0 x 0 must be 0");
 		
 	}
 
 	@Test
 	void testDivision() {
-		fail("Not yet implemented"); // TODO
+		assertEquals(2, tester.division(3, 5), "10/5 debe ser 2");
 	}
 
 }
