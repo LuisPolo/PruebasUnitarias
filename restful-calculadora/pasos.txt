@@ -1,3 +1,9 @@
+HEAD: Es el branch actual. Cuando se cambia de branches con git checkout la revision HEAD cambia para aputar al nuevo branch
+Si se quiere ver es cat .git/HEAD
+git fetch and git pull, hacen lo mismo solo que el fetch no integra la nueva data en mi branch y el pull si. El fetch sirve para ver todas las cosas que pasaron en un repositorio remoto.
+git revert: commit local al Stage
+git reset: regresa del stage working area
+
 //Configuracion del GIT
 git config --global user.name ""Luis Polo"
 git config --list
@@ -27,7 +33,12 @@ git push origin master
 ssh-keygen -t rsa -b 4096 -C "luispolomartinez@gmail.com"
 cat ~/.ssh/id_rsa.pub
 
-git pull
+//añadir repositorios remotos
+git remote add [nombre] [url]:
+git remote add pb git://github.com/paulboone/ticgit.git
+
+git pull <repositorio><branch>
+git pull origin master
 git push -f origin master
 touch pasos.txt
 

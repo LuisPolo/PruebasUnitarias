@@ -1,4 +1,4 @@
-package com.devops.calculadora.restfulcalculadora;
+/*package com.devops.calculadora.restfulcalculadora;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;
@@ -16,4 +16,4 @@ public class MyTestRunner {
 
 	}
 
-}
+}*/

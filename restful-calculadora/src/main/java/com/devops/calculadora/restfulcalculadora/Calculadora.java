@@ -33,4 +33,17 @@ public class Calculadora {
 	    }
 	    return x/y;
 	  }
+	
+	public double multiplicacionYSuma(int a, int b) {
+		try {
+			
+			double vMultiplicacion = this.multiplicacion(a, b);
+			double vSuma = this.suma(a, b);
+					
+			return vMultiplicacion + vSuma;
+					
+		}catch(Exception ex) {
+			throw ex;
+		}
+	}
 }

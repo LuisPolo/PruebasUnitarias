@@ -1,26 +1,22 @@
-package com.devops.calculadora.restfulcalculadora;
+package com.devopsTest.calculadora.restfulcalculadora;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 import com.devops.calculadora.restfulcalculadora.*;
 
-/*Imports para usar el Junit*/
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
-
-
-
-public class calculadoraTest {
+public class CalculadoraTest {
 
 	Calculadora tester = new Calculadora();
 	
 	@Test
 	void testSuma() {
 	    System.out.println("Entre a suma");
-		assertEquals(15, tester.suma(10, 5), "10 + 5 debe ser 15");
+		assertEquals(15, tester.suma(10, 5), "10 + 5 debe ser 15");		
 	}
 
 	@Test
 	void testResta() {
-		assertEquals(5, tester.resta(10, 5), "10 - 5 debe ser 10");
+		assertEquals(5, tester.resta(10, 5), "10 - 5 debe ser 5");
 	}
 
 	@Test
