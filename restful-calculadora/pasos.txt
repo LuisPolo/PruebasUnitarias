@@ -84,6 +84,7 @@ git branch
 git diff --cached
 
 --Ver log de manera ordenada (https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones)
+-- I have two aliases I normally throw in my ~/.gitconfig file:
 git log --pretty=format:"%h %s" --graph
 [alias]
 lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
