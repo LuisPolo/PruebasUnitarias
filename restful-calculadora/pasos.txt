@@ -84,6 +84,7 @@ git branch
 git diff --cached
 
 --Ver log de manera ordenada (https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones)
+--https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
 -- I have two aliases I normally throw in my ~/.gitconfig file:
 git log --pretty=format:"%h %s" --graph
 [alias]
