@@ -33,7 +33,7 @@ git push origin master
 ssh-keygen -t rsa -b 4096 -C "luispolomartinez@gmail.com"
 cat ~/.ssh/id_rsa.pub
 
-//añadir repositorios remotos
+//aÃ±adir repositorios remotos
 git remote add [nombre] [url]:
 git remote add pb git://github.com/paulboone/ticgit.git
 
@@ -79,3 +79,6 @@ git branch
 
 --Como ver que elementos se han subido al stage
 git diff --cached
+
+--Ver log de manera ordenada (https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones)
+git log --pretty=format:"%h %s" --graph
