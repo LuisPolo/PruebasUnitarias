@@ -62,11 +62,13 @@ git config --local -e
 --Salir de la pantalla (http://www.unirioja.es/cu/enriquez/docencia/Quimica/vi.pdf)
 ctrl C :q! 
 
+--Como crear ramas por comandos
+git checkout -b "developer"
 
+--Como ver las ramas creadas
+git branch
 
+--Como ver que elementos se han subido al stage
+git diff --cached
 
-
-
-
-
-
+develop
