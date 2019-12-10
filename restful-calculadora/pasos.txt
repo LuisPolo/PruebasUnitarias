@@ -65,10 +65,17 @@ ctrl C :q!
 --Como crear ramas por comandos
 git checkout -b "developer"
 
+--Como eliminar branches
+git branch -d develop
+
+--Forzar eiminacion de rama
+git branch -D develop
+
+--Actualizar esta eliminacion en el remoto
+git push origin :develop
+
 --Como ver las ramas creadas
 git branch
 
 --Como ver que elementos se han subido al stage
 git diff --cached
-
-develop
