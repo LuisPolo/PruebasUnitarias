@@ -1,5 +1,8 @@
-HEAD: Es el branch actual. Cuando se cambia de branches con git checkout la revision HEAD cambia para aputar al nuevo branch
-Si se quiere ver es cat .git/HEAD
+HEAD: Es el branch actual. Cuando se cambia de branches con git checkout la revision HEAD cambia para aputar al nuevo branch.
+Es un puntero que indica en que rama me encuentro en cada momento. Contiene una referencia al commit mas reciente de la rama actual.
+Si se quiere ver es cat .git/HEAD o git show head
+ORIGIN: Es el nombre corto que indica un repositorio remoto del cual se clono. origin — that is the default name Git gives to the server you cloned from.
+
 git fetch and git pull, hacen lo mismo solo que el fetch no integra la nueva data en mi branch y el pull si. El fetch sirve para ver todas las cosas que pasaron en un repositorio remoto.
 git revert: commit local al Stage
 git reset: regresa del stage working area
@@ -42,7 +45,6 @@ git pull origin master
 git push -f origin master
 touch pasos.txt
 
-
 //Cambiar proxy
 //Con el ssh
 
@@ -71,6 +73,9 @@ git branch -d develop
 --Forzar eiminacion de rama
 git branch -D develop
 
+--Crear la rama en repositorio remoto
+git push origin "nombre de la rama en el remoto"
+
 --Actualizar esta eliminacion en el remoto
 git push origin :develop
 
@@ -81,4 +86,15 @@ git branch
 git diff --cached
 
 --Ver log de manera ordenada (https://git-scm.com/book/es/v2/Fundamentos-de-Git-Ver-el-Historial-de-Confirmaciones)
+--https://stackoverflow.com/questions/1838873/visualizing-branch-topology-in-git/34467298#34467298
+-- I have two aliases I normally throw in my ~/.gitconfig file:
+git config --global alias.lg1 "se pone lo que se desea"
 git log --pretty=format:"%h %s" --graph
+
+[alias]
+lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''%C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+lg = !"git lg1"
+
+--Retornar el stage al working area
+git reset head
