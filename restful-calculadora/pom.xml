@@ -65,7 +65,20 @@
 		    <artifactId>junit-jupiter-api</artifactId>
 		    <version>5.1.1</version>
 		    <scope>test</scope>
-		</dependency>			
+		</dependency>
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.1.1</version>
+		    <scope>test</scope>
+		</dependency>	
+		<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+		<dependency>
+		    <groupId>org.projectlombok</groupId>
+		    <artifactId>lombok</artifactId>
+		    <version>1.18.4</version>
+		    <scope>provided</scope>
+		</dependency>					
 	</dependencies>	
 	
 	<build>

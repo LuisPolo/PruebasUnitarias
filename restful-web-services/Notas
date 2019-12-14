@@ -1,0 +1,41 @@
+#Restful Web Service
+Social Media Application
+
+User -> Post
+
+-Retrieve All User -GET /users
+-Create a User -POST/users
+-Retrieve one User -GET /users/{id} --> /users/1
+-Delete a User -DELETE  /users/{id} --> /users/1
+
+Retrieve all post from a User - GET /users/{id}/posts
+Create a posts for a User - POST /users/{id}/posts
+Retrieve details of a post -GEt /users/{id}/posts/{post_id}
+
+/*Url para probar*/
+http://localhost:8081/hello-world
+
+/*Para ver que puerto esta usado*/
+https://veerasundar.com/blog/2009/10/how-to-check-which-application-is-using-which-port/
+
+/****************************/
+What is dispatcher servlet?
+the job of the DispatcherServlet is to take an incoming URI and find the right combination of 
+handlers (generally methods on Controller classes) and views (generally JSPs) that combine to
+ form the page or resource that's supposed to be found at that location.
+ 
+Whos is configuring dispatcher servlet?
+spring boot configuration
+
+What does dispatcher servlet do?
+
+How does the hello world objetc get converted to JSON
+spring boot configuration
+
+Who is configuring the erro mapping?
+
+/******/
+@Component: Indica que esa clase va a la base de datos
+@RequestBody : Annotation indicating a method parameter should be bound to the body of the HTTP request.
+@Autowired: Marks a constructor, field, setter method or config method as to be autowired by Spring's dependency injection facilities.
+Revisar> http://programandoointentandolo.com/2013/05/inyeccion-de-dependencias-en-spring.html
