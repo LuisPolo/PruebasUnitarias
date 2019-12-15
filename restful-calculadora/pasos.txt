@@ -2,12 +2,18 @@ HEAD: Es el branch actual. Cuando se cambia de branches con git checkout la revi
 Es un puntero que indica en que rama me encuentro en cada momento. Contiene una referencia al commit mas reciente de la rama actual.
 Si se quiere ver es cat .git/HEAD o git show head
 ORIGIN: Es el nombre corto que indica un repositorio remoto del cual se clono. origin — that is the default name Git gives to the server you cloned from.
-/*********************Diferencia entre Fastforward  y Manual Merge**********************/
-https://platzi.com/tutoriales/1170-git-github/1692-al-realizar-fusiones-de-ramas-en-git-que-significa-fast-forward-y-manual-merge-cual-es-la-diferencia/
+~ ====> ALT+126 virgulilla o tilde de la ñ
 
-/********************Diferencia entre Merge y Rebase***********************************/
+/*****************************Diferencia entre Fastforward  y Manual Merge****************************************************************/
+https://platzi.com/tutoriales/1170-git-github/1692-al-realizar-fusiones-de-ramas-en-git-que-significa-fast-forward-y-manual-merge-cual-es-la-diferencia/
+/******************************************************************************************************************************************/
+
+/******************************** DIFERENCIA ENTRE MERGE Y REBASE*********************************************/
+                               https://www.youtube.com/watch?v=quwMkNL4MJg
+/*************************************************************************************************************/
 Ambos hacen lo mismo; sin embargo con rebase se puede ordenar la historia de los cambios. Con merge los commits irian en desorden y no se tendria logica al ver la historia
-Merge (git merge rama)
+JAMAS SE HACE SOBRE RAMAS PUSHEADAS
+Merge (git merge rama) Me coloco en la rama a la que quiero llevar los cambios
 master 1 2 3
 merge dev2
        1 2 3 5
@@ -15,7 +21,7 @@ merge dev1
        1 2 3 5 4 6 (Merge)
 dev1   1 2 3 4
 dev2   1 2 3 5
-Rebase (git rebase rama, git rebase --continue)
+Rebase (git rebase rama, git rebase --continue, git rebase --abort): El orden es git rebase rama, luego si hay conflictos se resuelven y guardan, se da git add -A y finalmente git rebase --continue
 master 1 2 3
 rebase dev2
        1 2 3 5
@@ -23,13 +29,23 @@ rebase dev1
        1 2 3 4 5
 dev1   1 2 3 4
 dev2   1 2 3 5
-/*******************************************************************************************/
-/*Para copiar fuentes de un repositorio a otro*/
+
+/*********************************REBASE INTERACTIVO*******************************************************/ 
+             Siempre se hacen en la rama alterna nunca en la master ni sobre push
+                        https://www.youtube.com/watch?v=0_QwiNnj_dA
+***********************************************************************************************************/
+Me permite reordenar los commits creando un nuevo hash asi como agrupar varios commits en un solo commit.
+git rebase -i HEAD~4
+pick: Matener el mismo commit
+reword: Cambiamos el nombre del commit, debe ser de 1 a 1
+squash: Los cambios se guardan en un solo commit.
+
+/*********************************TRASLADAR FUENTES DE UN REPOSITORIO A OTRO *********************/
 git clone --mirror https://git-codecommit.us-west-2.amazonaws.com/v1/repos/proyecto-beneficio
 cd proyecto-beneficio.git
 git remote add migracion http://git.devops.sura.net.pe/integra/proyecto-beneficio.git
 git push --mirror migracion
-/**************************************************************/
+/************************************************************************************************/
 
 git fetch and git pull, hacen lo mismo solo que el fetch no integra la nueva data en mi branch y el pull si. El fetch sirve para ver todas las cosas que pasaron en un repositorio remoto.
 git revert: commit local al Stage
@@ -90,7 +106,7 @@ git clone https://github.com/LuisPolo/PruebasUnitarias.git
 --Ver la configuracion local
 git config --local -e
 --Salir de la pantalla (http://www.unirioja.es/cu/enriquez/docencia/Quimica/vi.pdf)
-ctrl C :q! 
+ESC :q! 
 
 --Como crear ramas por comandos
 git checkout -b "developer"
