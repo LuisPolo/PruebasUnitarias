@@ -2,7 +2,28 @@ HEAD: Es el branch actual. Cuando se cambia de branches con git checkout la revi
 Es un puntero que indica en que rama me encuentro en cada momento. Contiene una referencia al commit mas reciente de la rama actual.
 Si se quiere ver es cat .git/HEAD o git show head
 ORIGIN: Es el nombre corto que indica un repositorio remoto del cual se clono. origin — that is the default name Git gives to the server you cloned from.
+/*********************Diferencia entre Fastforward  y Manual Merge**********************/
+https://platzi.com/tutoriales/1170-git-github/1692-al-realizar-fusiones-de-ramas-en-git-que-significa-fast-forward-y-manual-merge-cual-es-la-diferencia/
 
+/********************Diferencia entre Merge y Rebase***********************************/
+Ambos hacen lo mismo; sin embargo con rebase se puede ordenar la historia de los cambios. Con merge los commits irian en desorden y no se tendria logica al ver la historia
+Merge (git merge rama)
+master 1 2 3
+merge dev2
+       1 2 3 5
+merge dev1
+       1 2 3 5 4 6 (Merge)
+dev1   1 2 3 4
+dev2   1 2 3 5
+Rebase (git rebase rama, git rebase --continue)
+master 1 2 3
+rebase dev2
+       1 2 3 5
+rebase dev1
+       1 2 3 4 5
+dev1   1 2 3 4
+dev2   1 2 3 5
+/*******************************************************************************************/
 /*Para copiar fuentes de un repositorio a otro*/
 git clone --mirror https://git-codecommit.us-west-2.amazonaws.com/v1/repos/proyecto-beneficio
 cd proyecto-beneficio.git
