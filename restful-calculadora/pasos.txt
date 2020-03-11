@@ -84,6 +84,7 @@ cat ~/.ssh/id_rsa.pub
 git remote add [nombre] [url]:
 git remote add pb git://github.com/paulboone/ticgit.git
 
+/*Antes de hacer el pull debo comitear todos mis cambios sino todo sera reemplazado por las fuentes del master del origin*/
 git pull <repositorio><branch>
 git pull origin master
 git push -f origin master
