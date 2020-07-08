@@ -47,6 +47,10 @@ git remote add migracion http://git.devops.sura.net.pe/integra/proyecto-benefici
 git push --mirror migracion
 /************************************************************************************************/
 
+/***Me configura la longitud de los path****************/
+git config --system core.longpaths true
+
+
 git fetch and git pull, hacen lo mismo solo que el fetch no integra la nueva data en mi branch y el pull si. El fetch sirve para ver todas las cosas que pasaron en un repositorio remoto.
 git revert: commit local al Stage
 git reset: regresa del stage working area
